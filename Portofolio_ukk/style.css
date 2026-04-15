@@ -1,0 +1,163 @@
+html, body {
+    background-color: #0f0f0f; /* warna gelap biar nggak putih */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    background: url('BMW1.jpg') no-repeat center/cover;
+    height: 100vh;
+    color: #e0e0e0;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(101, 90, 85, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* NAV TEXT */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d0d0d0;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* NEON BIRU SOFT */
+nav ul li a:hover {
+    color: #6fbaff;
+    text-shadow: 0 0 5px rgba(111, 186, 255, 0.6);
+}
+
+/* GARIS HOVER */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #6fbaff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CARD (GLASS EFFECT) */
+.card {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* FOTO */
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* JUDUL NEON */
+h1 {
+    margin-bottom: 10px;
+    color: #cfe9ff;
+    text-shadow: 0 0 6px rgba(111, 186, 255, 0.5);
+}
+
+/* TEXT */
+p {
+    font-size: 14px;
+    color: #d6d6d6;
+}
+
+/* SKILLS */
+.skills ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.skills li {
+    margin: 10px 0;
+    padding: 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* HOVER SKILL */
+.skills li:hover {
+    background: rgba(111, 186, 255, 0.2);
+    color: #6fbaff;
+}
+
+.skill-list li a {
+    text-decoration: none;   /* hilangin underscore */
+    color: #e0e0e0;          /* tetap putih abu */
+    display: block;
+    transition: 0.3s;
+}
+
+/* pas hover ikut neon */
+.skill-list li a:hover {
+    color: #6fbaff;
+}
+/* FADE IN */
+body {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FADE OUT */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
